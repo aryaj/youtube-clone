@@ -14,19 +14,19 @@ const Sidebar = () => {
             <div className='pb-5'>
 
                 <ul className=''>
-                    <li className='py-2'><Link to={"/"}>Home</Link></li>
-                    <li className='py-2'>Sports</li>
-                    <li className='py-2'>Gaming</li>
-                    <li className='py-2'>Movies</li>
+                    <li className='py-1'><Link to={"/"}>Home</Link></li>
+                    <li className='py-1'>Sports</li>
+                    <li className='py-1'>Gaming</li>
+                    <li className='py-1'>Movies</li>
                 </ul>
             </div>
             <div className='pb-5'>
                 <h1 className='font-bold'>Subscription</h1>
                 <ul className=''>
-                    <li className='py-2'>Music</li>
-                    <li className='py-2'>Sports</li>
-                    <li className='py-2'>Gaming</li>
-                    <li className='py-2'>Movies</li>
+                    <li className='py-1'>Music</li>
+                    <li className='py-1'>Sports</li>
+                    <li className='py-1'>Gaming</li>
+                    <li className='py-1'>Movies</li>
                 </ul>
             </div>
             <div className='pb-5'>

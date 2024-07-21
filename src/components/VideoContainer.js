@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { YOUTUBE_VIDEOS_API } from '../utils/constants';
-import VideoCards from './VideoCards';
+import VideoCards, { AddVideoCardsHOC } from './VideoCards';
 import { Link } from 'react-router-dom';
 
 
@@ -11,7 +11,6 @@ const VideoContainer = () => {
   const getVideos = async () => {
     const response = await fetch(YOUTUBE_VIDEOS_API);
     const data = await response.json();
-    console.log("data", data)
     return setVideos(data.items);
   }
 
@@ -21,9 +20,10 @@ const VideoContainer = () => {
 
   return (
     <div className='grid grid-cols-5'>
+      {videos[0] && <AddVideoCardsHOC VideoCardsComp={VideoCards} info={videos[0]} />}
       {
         videos.map((video) => {
-          return <Link to={`/watch?v=${video.id}`}><VideoCards key={video.id} info={video} /></Link>
+          return <Link to={`/watch?v=${video.id}`} key={video.id} ><VideoCards info={video} /></Link>
         })
       }
     </div>

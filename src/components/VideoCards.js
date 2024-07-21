@@ -1,7 +1,6 @@
 import React from 'react'
 
 const VideoCards = ({ info }) => {
-    console.log("info", info);
     const { snippet, statistics } = info;
     const { channelTitle, title, thumbnails } = snippet;
     const { viewCount, likeCount, commentCount } = statistics;
@@ -15,6 +14,13 @@ const VideoCards = ({ info }) => {
             </ul>
         </div>
     )
+}
+
+export const AddVideoCardsHOC = ({ VideoCardsComp, info }) => {
+    return <div>
+        <VideoCardsComp info={info} />
+        <span className='ml-2'><strong>Ad:</strong> Intellipat</span>
+    </div>
 }
 
 export default VideoCards
